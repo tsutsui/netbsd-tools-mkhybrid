@@ -6,7 +6,7 @@
     $ cd src/external/gpl2
     $ git clone https://github.com/tsutsui/netbsd-tools-mkhybrid mkhybrid
     $ cd ../..
-    $ patch -p0 < src/external/gpl2/mkhybrid/patch/mkhybrid.diff
+    $ patch -p0 < external/gpl2/mkhybrid/patch/mkhybrid.diff
     $ sh build.sh -U -m macppc -j 4 build
     $ cd distrib/cdrom
     $ ${TOOLDIR}/bin/nbmake-macppc RELEASE=8.0 TARGET_CD_IMAGE=macppccd fetch
