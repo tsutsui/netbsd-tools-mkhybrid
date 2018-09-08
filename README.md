@@ -36,10 +36,11 @@ Currently based on netbsd-8-0-RELEASE tree.
 - tweak configure.in to pull some header files on NetBSD
 - pull -hide-rr-moved option from mkisofs-1.13
 - pull -graft-points option from mkisofs-1.13 and cdrtools-2.01
+- pull malloc related fixes in tree.c from cdrtools-2.01
 
 See commit logs and diffs for more details.
 
 ## Known issue
 
-- there is something wrong and get SIGSEGV during writing an output image
+- [fixed] there is something wrong and get SIGSEGV during writing an output image
   so that there is one kludge (comment out free(3) that causes SIGSEGV)
