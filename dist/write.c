@@ -324,7 +324,7 @@ static void FDECL1(write_files, FILE *, outfile)
 	       write_one_file(dwpnt->name, dwpnt->size, outfile);
 #endif /* APPLE_HYB */
 #endif
-	       //free(dwpnt->name);	// XXX avoid weird SIGSEGV XXX
+	       free(dwpnt->name);
 	  }
 
 #ifdef APPLE_HYB
