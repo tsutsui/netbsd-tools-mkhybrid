@@ -49,6 +49,18 @@ diff -u -p -d -r1.187.6.1 Makefile
  .if ${MKX11} != "no"
  SUBDIR+=	makestrs
  SUBDIR+=	makekeys
+--- /dev/null	2018-09-09 04:41:19.522010281 +0900
++++ tools/mkhybrid/Makefile	2018-09-08 10:01:35.329313232 +0900
+@@ -0,0 +1,9 @@
++#	$NetBSD$
++#
++
++HOSTPROGNAME=   ${_TOOL_PREFIX}mkhybrid
++HOST_SRCDIR=    external/gpl2/mkhybrid/bin
++HOST_CPPFLAGS=  -I${.CURDIR}
++
++.include "${.CURDIR}/../Makefile.nbincludes"
++.include "${.CURDIR}/../Makefile.host"
 --- /dev/null	2018-09-08 22:24:01.857446457 +0900
 +++ distrib/cdrom/8.0.conf	2018-09-06 01:16:42.555824532 +0900
 @@ -0,0 +1,267 @@
