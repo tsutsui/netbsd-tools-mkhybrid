@@ -20,6 +20,7 @@ SRCS=	data.c block.c low.c lfile.c btree.c node.c record.c lvolume.c \
 SRCS+=	getopt.c getopt1.c
 
 CPPFLAGS+=-DSYSTEM_ID_DEFAULT=\"NetBSD\" -DAPPLE_HYB -DVANILLA_AUTOCONF \
+	-DHAVE_CONFIG_H \
 	-I${DIST} -I${DIST}/include \
 	-I${DIST}/libhfs_iso \
 	-I${DIST}/libfile
