@@ -65,6 +65,7 @@ char *getenv ();
 #define NULL 0
 #endif
 
+#if 0 /* we need only getopt_long_only() */
 int
 getopt_long (argc, argv, options, long_options, opt_index)
      int argc;
@@ -75,6 +76,7 @@ getopt_long (argc, argv, options, long_options, opt_index)
 {
   return _getopt_internal (argc, argv, options, long_options, opt_index, 0);
 }
+#endif
 
 /* Like getopt_long, but '-' as well as '--' can indicate a long option.
    If an option that starts with '-' (not '--') doesn't match a long option,

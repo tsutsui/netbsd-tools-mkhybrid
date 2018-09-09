@@ -108,7 +108,9 @@ extern int internatmagic	__P((unsigned char *, int));
 extern void tryelf		__P((int, char *, int));
 
 
+#ifndef errno
 extern int errno;		/* Some unixes don't define this..	*/
+#endif
 
 extern char *progname;		/* the program name 			*/
 extern char *magicfile;		/* name of the magic file		*/

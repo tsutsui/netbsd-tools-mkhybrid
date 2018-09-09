@@ -230,8 +230,7 @@ static int last_nonopt;
    the new indices of the non-options in ARGV after they are moved.  */
 
 static void
-exchange (argv)
-     char **argv;
+exchange (char **argv)
 {
   int bottom = first_nonopt;
   int middle = last_nonopt;
@@ -288,8 +287,7 @@ exchange (argv)
 /* Initialize the internal data when the first call is made.  */
 
 static const char *
-_getopt_initialize (optstring)
-     const char *optstring;
+_getopt_initialize (const char *optstring)
 {
   /* Start processing options with ARGV-element 1 (since ARGV-element 0
      is the program name); the sequence of previously skipped
@@ -673,6 +671,7 @@ _getopt_internal (argc, argv, optstring, longopts, longind, long_only)
   }
 }
 
+#if 0 /* we need only getopt_long_only() */
 int
 getopt (argc, argv, optstring)
      int argc;
@@ -684,6 +683,7 @@ getopt (argc, argv, optstring)
 			   (int *) 0,
 			   0);
 }
+#endif
 
 #endif	/* _LIBC or not __GNU_LIBRARY__.  */
 
