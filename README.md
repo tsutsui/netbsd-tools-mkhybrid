@@ -3,14 +3,14 @@
 ## How to use
 
     $ cvs -d anoncvs@anoncvs.netbsd.org:/cvsroot checkout -rnetbsd-8-0-RELEASE src
+    $ cvs -d anoncvs@anoncvs.netbsd.org:/cvsroot checkout -rnetbsd-8-0-RELEASE xsrc
     $ cd src/external/gpl2
     $ git clone https://github.com/tsutsui/netbsd-tools-mkhybrid mkhybrid
     $ cd ../..
     $ patch -p0 < external/gpl2/mkhybrid/patch/mkhybrid.diff
-    $ sh build.sh -U -m macppc -j 4 build
+    $ OBJMACHINE=yes sh build.sh -U -m macppc -x -X ../xsrc -j 4 release
     $ cd distrib/cdrom
-    $ ${TOOLDIR}/bin/nbmake-macppc RELEASE=8.0 TARGET_CD_IMAGE=macppccd fetch
-    $ ${TOOLDIR}/bin/nbmake-macppc RELEASE=8.0 TARGET_CD_IMAGE=macppccd all
+    $ ${TOOLDIR}/bin/nbmake-macppc RELEASE=8.0 TARGET_CD_IMAGE=macppccd DISTRIBDIR=`pwd`/../../obj.macppc/releasedir all
 
 (See src/distrib/cdrom/README how to fetch set binaries and build iso images)
 
