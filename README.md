@@ -9,7 +9,9 @@
     $ cd ../..
     $ patch -p0 < external/gpl2/mkhybrid/patch/mkhybrid.diff
     $ OBJMACHINE=yes sh build.sh -U -m macppc -x -X ../xsrc -j 4 release
+      [check and denote "TOOLDIR" in the log]
     $ cd distrib/cdrom
+    $ ${TOOLDIR}/bin/nbmake-macppc RELEASE=8.0 obj
     $ ${TOOLDIR}/bin/nbmake-macppc RELEASE=8.0 TARGET_CD_IMAGE=macppccd DISTRIBDIR=`pwd`/../../obj.macppc/releasedir all
 
 (See src/distrib/cdrom/README how to fetch set binaries and build iso images)
