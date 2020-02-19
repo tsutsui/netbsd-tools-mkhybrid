@@ -29,7 +29,7 @@ Currently based on netbsd-8-0-RELEASE tree.
 
 - pull sources in OpenBSD's src/gnu/usr.sbin/mkhybrid/src into
   NetBSD's src/external/gpl2/mkhybrid/dist
-- pull Makefile in OpenbsD's src/gnu/usr.sbin/mkhybrid/mkhybrid
+- pull Makefile in OpenBSD's src/gnu/usr.sbin/mkhybrid/mkhybrid
   into NetBSD's src/external/gpl2/mkhybrid/bin
 - src/external/gpl2/mkhybrid/bin is prepared to build tools version
   in src/tools/mkhybrid using src/tools/Makefile.host
@@ -46,3 +46,10 @@ See commit logs and diffs for more details.
 
 - [fixed] there is something wrong and get SIGSEGV during writing an output image
   so that there is one kludge (comment out free(3) that causes SIGSEGV)
+
+## TODO
+
+- add support to specify permissions via mtree-specfiles
+  as native makefs(8) for non-root build
+- use configure script properly via src/tools/Makefile.gnuhost
+  for non-NetBSD host build
